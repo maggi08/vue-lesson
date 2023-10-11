@@ -1,6 +1,14 @@
 <template>
   <div class="">
-    <ListComp style="margin-bottom: 1000px" />
+    <header></header>
+
+    <main></main>
+
+    <footer></footer>
+
+    <TRefs />
+
+    <!-- <ListComp style="margin-bottom: 1000px" />
 
     <button @click="toggle()">Toggle</button>
     <button @click="isToggled2 = !isToggled2">Toggle 2</button>
@@ -36,15 +44,12 @@
         isToggled2 ? 'background: red;' : ''
       ]"
     >
-      <!-- isToggled ? 'background: green' : 'background: purple',
-        isToggled ? 'color: yellow' : 'color: white' -->
-      <!-- :style="`background: ${isToggled ? 'green' : 'black'}`" -->
       isToggled {{ isToggled }}
       <br />
       isToggled2 {{ isToggled2 }}
-    </div>
+    </div> -->
 
-    <div
+    <!-- <div
       v-else-if="isShown && !isToggled"
       style="
         background: rgb(0, 30, 255);
@@ -67,7 +72,7 @@
         width: 200px;
         height: 80px;
       "
-    ></div>
+    ></div> -->
 
     <!-- <h1 @click="hello">Hello Vue</h1> -->
 
@@ -87,19 +92,21 @@
 
     <div :id="oneDiv" class="">{{ calculateResult() }}</div> -->
 
-    <CounterComp />
+    <CounterComp v-if="false" />
   </div>
 </template>
 
 <script>
 import CounterComp from '@/components/CounterComp.vue'
-import ListComp from '@/components/ListComp.vue'
+// import ListComp from '@/components/ListComp.vue'
+import TRefs from '@/components/TRefs.vue'
 
 export default {
   name: 'App',
   components: {
     CounterComp,
-    ListComp
+    // ListComp,
+    TRefs
   },
   data() {
     return {

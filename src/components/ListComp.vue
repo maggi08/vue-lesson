@@ -1,5 +1,6 @@
 <template>
   <div class="px-4">
+    hello
     <!-- <div class="" @click.self="parent">
       parent
       <div class="" @click="child1">child</div>
