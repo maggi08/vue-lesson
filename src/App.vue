@@ -1,12 +1,16 @@
 <template>
   <div class="">
-    <header></header>
+    <h1 style="text-align: center">My Blog</h1>
+    <div
+      class=""
+      style="width: 80%; margin: 80px auto; display: flex; justify-content: space-between"
+    >
+      <BlogList :count-number="1" />
 
-    <main></main>
+      <CounterComp />
+    </div>
 
-    <footer></footer>
-
-    <TRefs />
+    <!-- <TRefs /> -->
 
     <!-- <ListComp style="margin-bottom: 1000px" />
 
@@ -98,15 +102,17 @@
 
 <script>
 import CounterComp from '@/components/CounterComp.vue'
+import BlogList from '@/components/blog/BlogList.vue'
 // import ListComp from '@/components/ListComp.vue'
-import TRefs from '@/components/TRefs.vue'
+// import TRefs from '@/components/TRefs.vue'
 
 export default {
   name: 'App',
   components: {
     CounterComp,
+    BlogList
     // ListComp,
-    TRefs
+    // TRefs
   },
   data() {
     return {
